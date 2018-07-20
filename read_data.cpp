@@ -59,6 +59,7 @@ int main(int argc, char* argv[])
 		}
 	}
 
+	ListPeople(address_book);
 	// Optional: Delete All global objects allocated by libprotobuf
 	google::protobuf::ShutdownProtobufLibrary();
 	return 0;

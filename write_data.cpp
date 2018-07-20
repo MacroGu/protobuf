@@ -28,7 +28,7 @@ void PromptForAddress(tutorial::Person *person)
 		std::cout << "Enter a phone Number (or leave blank to finish): " << std::endl;
 		std::string number;
 		std::cin >> number;
-		if (number.empty())
+		if (number == "quit")
 		{
 			break;
 		}
@@ -60,29 +60,7 @@ void PromptForAddress(tutorial::Person *person)
 
 int main(int argc, char* argv[])
 {
-
-
-	std::map<int, int> testMap;
-	testMap.insert(std::make_pair(1,1));
-	testMap.insert(std::make_pair(2,1));
-	testMap.insert(std::make_pair(3,1));
-	testMap.insert(std::make_pair(5,2));
-	testMap.insert(std::make_pair(4,1));
-
-	for (auto testMapIter = testMap.begin(); testMapIter != testMap.end(); testMapIter++)
-	{
-		    std::cout << "key: " << testMapIter->first << " value: " << testMapIter->second << std::endl;
-	}
-
-	std::unordered_map<int, int> utestMap;
-	utestMap.insert(std::make_pair(1,1));
-	utestMap.insert(std::make_pair(2,1));
-	utestMap.insert(std::make_pair(3,1));
-	utestMap.insert(std::make_pair(5,2));
-	utestMap.insert(std::make_pair(4,1));
-
-
-	return 0;
+	GOOGLE_PROTOBUF_VERIFY_VERSION;
 
 	if (argc != 2)
 	{
